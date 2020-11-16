@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Auto Mail{% endblock %}
+{% block content %}
+
+<html>
+    <body>
+        <div class="how-to-use">
+            <p class="animate-reveal instructions">
+                This is a web app designed to send emails automatically with a csv file.
+                To use it, you must have a Gmail account.  In your gmail account settings, 
+                <a href="https://support.google.com/accounts/answer/6010255?hl=en">allow for less secure apps</a>.
+                This allows the Python script to use the SMTP library to send emails from that account.
+            </p>
+            <p class="animate-reveal instructions2">
+                After adjusting your account, sign in with your credentials on the home page.  
+                You must have a CSV file that contains emails only on one column.  
+                Import the file by pressing "Choose file", this will load all the emails onto the web app.
+                After filling in the subject and message box, you should be good to go! 
+            </p>
+        </div>
+        
+    </body>
+</html>
+{% endblock %}

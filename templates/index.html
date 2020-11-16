@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Auto Mail{% endblock %}
+{% block content %}
+<html>
+
+<body>
+    {errors}
+    <p>Enter your email and password:</p>
+    <form method="POST" action="."  enctype="multipart/form-data">
+        <div class="sign-in">
+            <p><input placeholder="Gmail" name="email_address" /> 
+                <input type="password" placeholder="Password" name="email_password" />
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label> 
+            </p>
+        </div>
+        <p>
+            To: 
+            <!-- <input placeholder="To" name="contacts" />  -->
+            <!-- <input type="submit" name="action" value="Add another" /> -->
+            <input type="file" name="input_file" />
+        </p>
+        <p><input placeholder="Subject" name="subject" /></p>
+        <p>
+            <textarea id="message" name="message" rows="8" cols="50" placeholder="Type your message here"></textarea>
+        </p>
+        <div class="submit-button">
+            <!-- <button type="submit">Send Mail</button> -->
+            <p><input type="submit" name="action" value="Send Mail" /></p>
+            
+        </div>
+    </form>
+    
+</body>
+
+</html>
+{% endblock %}
